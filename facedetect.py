@@ -51,3 +51,4 @@ class Detect(Fileoperation):
           fh.close()
 fileObject1=Fileoperation()
 detectObject2=Detect(fileObject1)
+
