@@ -5,9 +5,13 @@ import json
 
 class Fileoperation(object): 
     def __init__(self):
-      os.chdir("/home/manu/facerecognition/facedetect/photos/002/0655/0655.001")
+      path1=[]
+      os.chdir("/home/manu/facerecognition/test/photos/002/0655/0655.001")
       for root, dirs, files in os.walk(".", topdown = False):
-          for name in files:
+          for file_ in files:
+            path1.append(os.path.join(root, file_))
+          for name in path1:
+              print(name)
               self.image = face_recognition.load_image_file(name)
               self.im = Image.open(name)
               self.head,self.tail=os.path.split(name)
