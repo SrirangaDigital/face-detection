@@ -6,7 +6,7 @@ import json
 class Fileoperation(object): 
     def __init__(self):
       path1=[]
-      os.chdir("/home/manu/facerecognition/test/photos/002/0655/0655.001")
+      os.chdir("/home/manu/facerecognition/facedetect/photos/002/0655/0655.001")
       for root, dirs, files in os.walk(".", topdown = False):
           for file_ in files:
             path1.append(os.path.join(root, file_))
